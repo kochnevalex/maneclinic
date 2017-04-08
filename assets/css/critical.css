@@ -1165,7 +1165,7 @@ img {
 
 .header__top-btn span {
   display: block;
-  background-color: #000000;
+  background-color: #818181;
   height: 4px;
   margin-bottom: 6px;
   -webkit-transition: all .5s ease;
@@ -1869,6 +1869,7 @@ button.mfp-arrow {
 .mango-callback .widget-wrapper.selected-dynamic.mng-wgt.common-window .button-widget-open::before,
 .mango-callback .widget-wrapper.selected-dynamic.mng-wgt.common-window .button-widget-open,
 .mango-callback .widget-wrapper.selected-dynamic::before, .mango-callback .widget-wrapper.selected-dynamic:after {
-  background-color: #038c09; }
+  background-color: #038c09;
+  font-family: "ProximaNovaCond Regular"; }
 
 /*# sourceMappingURL=critical.css.map */
