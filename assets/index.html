@@ -84,13 +84,13 @@
               <div id="headerTopMenu" class="header__top-menu">
                 <div class="container">
                   <div class="header__menu-inner">
-                    <ul class="header__top-menu-list">
-                      <li><a href="#">Для кого</a></li>
-                      <li><a href="#">Почему вам это нужно</a></li>
-                      <li><a href="#">Примеры работ</a></li>
-                      <li><a href="#">Цены</a></li>
-                      <li><a href="#">Консультация</a></li>
-                      <li><a href="#">Контакты</a></li>
+                    <ul id="menu" class="header__top-menu-list">
+                      <li><a href="#poster">Для кого</a></li>
+                      <li><a href="#tech">Почему вам это нужно</a></li>
+                      <li><a href="#example">Примеры работ</a></li>
+                      <li><a href="#price">Цены</a></li>
+                      <li><a href="#consultation">Консультация</a></li>
+                      <li><a href="#footer">Контакты</a></li>
                     </ul>
                     <div class="header__top-info">
                       <ul class="header__top-info-list">
@@ -105,13 +105,13 @@
           </div>
         </div>
       </header>
-      <section class="poster">
+      <section id="poster" class="poster">
         <div data-bgimage="images/slideImage/slide.jpg" class="poster__bg bg-image"></div>
         <div class="container">
           <div class="poster__inner">
             <div class="poster__text">
               <div class="heading">Уже через 2 часа вы проснетесь с новыми шведскими имплантами Nobel Biocare</div>
-              <div class="sub-heading">Европейская методика имплантации во сне: без боли, <br> дискомфорта и с пожизненной гарантией</div><a id="modal" href="#formWrap" class="btn btn--large spacer--small btn--accent">Записаться на консультацию</a>
+              <div class="sub-heading">Европейская методика имплантации во сне: без боли, <br> дискомфорта и с пожизненной гарантией</div><a href="#formWrap" class="modal btn btn--large spacer--small btn--accent">Записаться на консультацию</a>
             </div><a href="#" class="btn btn--phone btn--accent btn--ripple"></a>
           </div>
         </div>
@@ -201,14 +201,14 @@
               <div class="col-sm-6">
                 <div class="message-info">
                   <div class="sub-heading">После визита в клинику обеспечиваем вам поддержку 24\7</div>
-                  <div class="text">Мы бесплатно предоставляем все необходимые лекарства и консультируем по любым вопросам</div><a href="#" class="btn btn--large spacer--small btn btn--accent">Записаться на консультацию</a>
+                  <div class="text">Мы бесплатно предоставляем все необходимые лекарства и консультируем по любым вопросам</div><a href="#formWrap" class="modal btn btn--large spacer--small btn btn--accent">Записаться на консультацию</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <section data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-out-cubic" class="tech">
+      <section id="tech" data-aos="fade-up" data-aos-duration="2000" data-aos-easing="ease-out-cubic" class="tech">
         <div class="container">
           <h3 class="heading">Имплантация, костная пластика и пластика десны в нашей клинике могут быть произведены в один этап, потому что:</h3>
           <div class="tech-block row">
@@ -235,13 +235,13 @@
             <div class="col-sm-6">
               <div class="tech-block__text">
                 <div class="sub-heading">Срок службы имплантов, установленных в нашей клинике — пожизненный.</div>
-                <div class="text">В случае, если имплант не приживется,  проводится бесплатная повторная установка.</div><a href="#" class="btn btn--large spacer--small btn--accent">Записаться на консультацию</a>
+                <div class="text">В случае, если имплант не приживется,  проводится бесплатная повторная установка.</div><a href="#formWrap" class="modal btn btn--large spacer--small btn--accent">Записаться на консультацию</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="example">
+      <section id="example" class="example">
         <div class="container">
           <div class="example-wrap">
             <h3 class="heading">Примеры работ</h3>
@@ -266,7 +266,7 @@
                 <div class="col-sm-6">
                   <div class="example-block__text">
                     <div class="sub-heading"> Дмитрий Кирриленко <em>(бизнесмен)</em></div>
-                    <div class="text"></div>
+                    <div class="text">Никогда не находил достаточного времени, чтобы ухаживать за зубами. В итоге, к моменту визита потерял 12 коренных зубов. 8 были с глубоким кариесом.</div>
                     <div class="sub-heading">Задача</div>
                     <div class="text">Полное восстановление двух челюстей. Установка 8-ми имплантатов на каждую челюсть. Наращивание костной ткани в боковых отделах верхней и нижней челюстей. Пластика десны в области верхней и нижней челюстей. Новые зубы сразу после операции.</div>
                     <div class="sub-heading">Результат</div>
@@ -293,30 +293,30 @@
           </div>
         </div>
       </section>
-      <section class="price">
+      <section id="price" class="price">
         <div class="container">
           <h3 class="heading">Услуги и цены</h3>
           <div class="price-wrap">
             <div data-aos="flip-right" data-aos-duration="1500" data-aos-delay="300" class="price__item">
               <div class="sub-heading">Одноэтапная имплантация</div>
               <div class="text">Коплексная диагностика <br> Установка импланта Nobel Biocare <br> Поддержка после приема 24\7 <br> Обеспечение необходимыми медикаментами</div>
-              <div class="price__item-cost">от 50 000</div><a href="#" class="btn btn--middle btn--transparent">Записаться на прием</a>
+              <div class="price__item-cost">от 50 000</div><a href="#formWrap" class="modal btn btn--middle btn--transparent btn--full">Записаться на прием</a>
             </div>
             <div data-aos="flip-right" data-aos-duration="1500" data-aos-delay="500" class="price__item">
               <div class="sub-heading">Синус-лифтинг</div>
               <div class="text">Коплексная диагностика <br> Наращивание костной ткани <br> Поддержка после приема 24\7 <br> Обеспечение необходимыми медикаментами</div>
-              <div class="price__item-cost">от 35 000</div><a href="#" class="btn btn--middle btn--transparent">Записаться на прием</a>
+              <div class="price__item-cost">от 35 000</div><a href="#formWrap" class="modal btn btn--middle btn--transparent btn--full">Записаться на прием</a>
             </div>
             <div data-aos="flip-right" data-aos-duration="1500" data-aos-delay="700" class="price__item">
               <div class="sub-heading">Пластика десны</div>
               <div class="text">Коплексная диагностика <br> Увеличение объема десны <br>  Поддержка после приема 24\7 <br> Обеспечение необходимыми медикаментами</div>
-              <div class="price__item-cost">от 20 000</div><a href="#" class="btn btn--middle btn--transparent">Записаться на прием</a>
+              <div class="price__item-cost">от 20 000</div><a href="#formWrap" class="modal btn btn--full btn--middle btn--transparent">Записаться на прием</a>
             </div>
-            <div class="sub-heading"></div>
+            <p class="sub-heading">Все манипуляции могут быть проведены во сне. Стоимость 1 часа седации - 8000 руб. <br> На все услуги возможна рассрочка <br>  Скидка 10% при оплате всей суммы за раз</p>
           </div>
         </div>
       </section>
-      <section data-aos="fade-up" data-aos-duration="1500" class="consultation">
+      <section id="consultation" data-aos="fade-up" data-aos-duration="1500" class="consultation">
         <div class="container">
           <h3 class="heading">Как проходит консультация</h3>
           <div class="consultation-wrap">
@@ -350,7 +350,7 @@
                 <div class="text">Снятие слепков с челюстей  для изготовления гипсовых моделей <br> Анализ клинической ситуации на моделях.</div>
               </div>
             </div>
-          </div><a href="#" class="btn btn--large spacer--small btn btn--accent">Записаться на консультацию</a>
+          </div><a href="#formWrap" class="modal btn btn--large spacer--small btn btn--accent">Записаться на консультацию</a>
         </div>
       </section>
       <div class="container">
@@ -366,16 +366,18 @@
               <label>Ваш телефон</label>
             </div>
             <div class="form-group">
-              <input type="email" required="" class="form-control"><span class="highlight"></span><span class="bar"></span>
+              <input type="email" class="form-control"><span class="highlight"></span><span class="bar"></span>
               <label>E-mail</label>
             </div>
             <div class="form-group">
               <textarea required="" rows="1" class="form-control"></textarea><span class="highlight"></span><span class="bar"></span>
               <label>Комментарий</label>
             </div>
-            <button type="submit" class="btn btn--accent btn--large spacer--small">Отправить</button><a href="#" class="clear-form link">Очистить форму</a>
+            <button type="submit" class="btn btn--accent btn--large spacer--small btn--full">Отправить</button><a href="#" class="clear-form link">Очистить форму</a>
           </form>
         </div>
+        <div id="licens" class="licens"><a href="images/licens/licens1.jpg"></a><a href="images/licens/licens2.jpg"></a><a href="images/licens/licens3.jpg"></a></div>
+        <div id="certificate" class="certificate"><a href="images/conf.jpg"></a></div>
       </div>
     </div>
     <footer id="footer" class="footer">
@@ -402,7 +404,7 @@
       <div class="cpr">
         <div class="container">
           <div class="cpr__dt">© 2017 MANECLINIC</div>
-          <div class="cpr__link"><a href="" class="link">Сертификаты</a>   <a href="#" class="link"> Политика конфидециальности</a></div>
+          <div class="cpr__link"><a id="certificateBtn" href="" class="link">Сертификаты</a>   <a id="licensBtn" href="#licens" class="link"> Политика конфидециальности</a></div>
         </div>
       </div>
     </footer>

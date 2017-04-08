@@ -1,5 +1,10 @@
 .header
-  position: relative
+  position: fixed
+  z-index: 6
+  top: 0
+  left: 0
+  width: 100%
+  background-color: $body-bg
 
 .header__top-bar.header__top-bar
   display: flex
@@ -38,7 +43,6 @@
 
 .header__top-nav.active
 
-
 .header__top-ttl
   font-size: 16px
   line-height: 50px
@@ -52,6 +56,7 @@
   right: 0
   left: 0
   background-color: $body-bg
+  box-shadow: 0 20px 30px rgba($black-color, .1)
 
 .header__menu-inner
   padding-bottom: 60px
@@ -100,6 +105,7 @@
     display: block
     position: relative
     padding: 0
+    box-shadow: none
 
   .header__menu-inner
     display: flex

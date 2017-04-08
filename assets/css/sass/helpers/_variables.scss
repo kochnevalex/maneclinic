@@ -73,16 +73,16 @@ $screen-xs: 0;
 $screen-xm: 544px;
 $screen-sm: 768px;
 $screen-md: 992px;
-$screen-lg: 1280px;
-$screen-xl: 1640px;
+//$screen-lg: 992px;
+//$screen-xl: 992px;
 
 $grid-breakpoints: (
         xs: $screen-xs,
         xm: $screen-xm,
         sm: $screen-sm,
-        md: $screen-md,
-        lg: $screen-lg,
-        xl: $screen-xl
+        md: $screen-md
+        //lg: $screen-lg,
+        //xl: $screen-xl
 ) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 
@@ -94,8 +94,8 @@ $container-max-widths: (
         xm: 576px,
         sm: 720px,
         md: 1020px,
-        lg: 1140px,
-        xl: 1500px
+        //lg: 1020px,
+        //xl: 1020px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
@@ -114,4 +114,3 @@ $enable-transitions: false !default;
 $enable-hover-media-query: false !default;
 $enable-grid-classes: true !default;
 $enable-print-styles: true !default;
-

@@ -2611,6 +2611,9 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .poster__text .heading {
   margin-bottom: 10px; }
 
+.poster .bg-image {
+  opacity: .6; }
+
 @media screen and (min-width: 992px) {
   .poster__text {
     padding: 0 145px;
@@ -2853,7 +2856,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .price__item {
   padding: 20px;
   margin-bottom: 40px;
-  border-radius: 15px;
+  border-radius: 25px;
   background-color: #fff; }
 
 .price__item-cost {
@@ -2872,6 +2875,11 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
 .price__item .sub-heading {
   margin-bottom: 10px;
   text-align: left; }
+
+p.sub-heading {
+  width: 100%;
+  margin-top: -10px;
+  text-align: center; }
 
 @media (min-width: 768px) {
   .price-wrap {

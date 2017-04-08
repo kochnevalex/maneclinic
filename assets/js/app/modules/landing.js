@@ -7,7 +7,13 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
 
             headerBtn: '#headerTopBtn',
             headerMenu: '#headerTopMenu',
-            inputPhone: 'input[name=phone]'
+            inputPhone: 'input[name=phone]',
+            licensGallery: '#licens',
+            licensGalleryBtn: '#licensBtn',
+            certificateGalleryBtn: '#certificateBtn',
+            certificateGallery: '#certificate',
+            form: '.form-wrap'
+
             // elements
             // prop
             // data
@@ -21,6 +27,12 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             headerBtn: null,
             headerMenu: null,
             inputPhone: null,
+            licensGallery: null,
+            licensGalleryBtn: null,
+            certificateGalleryBtn: null,
+            certificateGallery: null,
+            form: null,
+
 
             // prop
             preloaded: false
@@ -44,6 +56,11 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             _g.headerBtn = $(_p.headerBtn);
             _g.headerMenu = $(_p.headerMenu);
             _g.inputPhone = $(_p.inputPhone);
+            _g.licensGallery = $(_p.licensGallery);
+            _g.licensGalleryBtn = $(_p.licensGalleryBtn);
+            _g.certificateGallery = $(_p.certificateGallery);
+            _g.certificateGalleryBtn = $(_p.certificateGalleryBtn);
+            _g.form = $(_p.form);
 
         },
 
@@ -51,7 +68,10 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             _openHeaderMenu();
             _openModalForm();
             _clearForm();
-
+            _scrollAnchor();
+            _licensGalleryInit();
+            _certificateGalleryInit();
+            _labelAnimation();
         },
 
         _setBinds = function () {
@@ -74,12 +94,12 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
         },
 
         _openModalForm = function () {
-            $('#modal').magnificPopup({
+            $('.modal').magnificPopup({
                 type: 'inline',
-                mainClass: 'active',
                 closeOnBgClick: true,
                 showCloseBtn: false
             });
+
 
         },
 
@@ -90,6 +110,106 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                 e.preventDefault();
 
             });
+        },
+        _scrollAnchor = function () {
+
+            $("#menu").on("click", "a", function (event) {
+                event.preventDefault();
+                var id = $(this).attr('href'),
+                    top = $(id).offset().top;
+                top = top + 200;
+
+
+                $('body,html').animate({scrollTop: top}, 1200);
+            });
+
+        },
+        _licensGalleryInit = function () {
+
+
+            _g.licensGalleryBtn.on('click', function (e) {
+                e.preventDefault();
+                _g.licensGallery.magnificPopup({
+
+                    closeOnBgClick: true,
+                    delegate: 'a', // the selector for gallery item
+                    type: 'image',
+                    overflowY: 'auto',
+                    showCloseBtn: false,
+                    gallery: {
+                        enabled: true
+                    }
+
+
+                });
+                _g.licensGallery.magnificPopup('open');
+
+            });
+
+
+        },
+        _labelAnimation = function () {
+            _g.form.each(function () {
+                var $input = $(this).find('input'),
+                    $textarea = $(this).find('textarea');
+
+
+                $input.each(function () {
+                    console.log($input);
+                    $(this).on('change', function () {
+                        var val = $(this).val();
+                        if (val != '') {
+                            $(this).addClass('active');
+                        }
+                        else {
+                            $(this).removeClass('active');
+                        }
+                    });
+
+                });
+
+                $textarea.each(function () {
+                    $(this).on('change', function () {
+                        var val = $(this).val();
+                        if (val != '') {
+                            $(this).addClass('active');
+                        }
+
+                        else {
+                            $(this).removeClass('active');
+                        }
+                    });
+
+                });
+
+
+            });
+        },
+
+        _certificateGalleryInit = function () {
+
+
+            _g.certificateGalleryBtn.on('click', function (e) {
+                e.preventDefault();
+                _g.certificateGallery.magnificPopup({
+
+                    closeOnBgClick: true,
+                    delegate: 'a', // the selector for gallery item
+                    type: 'image',
+                    overflowY: 'auto',
+                    fixedBgPos: 'auto',
+                    showCloseBtn: false,
+                    gallery: {
+                        enabled: true
+                    }
+
+
+                });
+                _g.certificateGallery.magnificPopup('open');
+
+            });
+
+
         },
 
 

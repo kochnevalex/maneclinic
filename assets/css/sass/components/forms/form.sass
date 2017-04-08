@@ -1,12 +1,12 @@
 /* form starting stylings ------------------------------- */
 .form-group
   position: relative
-  margin-bottom: 27px
+  margin-bottom: 35px
 
 .form-control
   width: 100%
   font-size: 18px
-  padding: 10px 10px 10px 5px
+  padding: 10px 10px 3px 5px
   display: block
   border: none
   border-bottom: 1px solid $grey-color
@@ -22,23 +22,25 @@ textarea.form-control
   outline: none
 
 /* LABEL ======================================= */
-label
+.form-group label
   color: $grey-color
   font-size: 18px
   font-weight: normal
   position: absolute
   pointer-events: none
   left: 50%
+  width: 80%
   transform: translateX(-50%)
-  top: 20px
+  top: 10px
   transition: 0.2s ease all
   -moz-transition: 0.2s ease all
   -webkit-transition: 0.2s ease all
 
 /* active state */
+//.form-control:valid ~ label
 .form-control:focus ~ label,
-.form-control:valid ~ label
-  top: -10px
+.form-control.active ~ label
+  top: -15px
   font-size: 16px
   color: $main-color
 
@@ -97,7 +99,7 @@ label
 
 .form-ttl
   text-align: center
-  margin-bottom: 10px
+  margin-bottom: 20px
   font-size: 26px
   line-height: 32px
   font-family: $base-font-semibold
@@ -107,15 +109,12 @@ label
 .form-wrap.active
   display: block
 
-.mfp-content .form-wrap
-  display: block
-
 .form-wrap
   display: none
   margin: 0 auto
   position: relative
-  max-width: 470px
-  padding: 75px 40px 80px 40px
+  max-width: 370px
+  padding: 55px 20px 60px 20px
   border-radius: 50px
   background-color: $white-color
   text-align: center
@@ -132,6 +131,12 @@ label
 .form-wrap .link:hover
   text-decoration: none
 
+.form-wrap .btn
+  margin-top: 20px
+  padding-top: 15px
+  padding-bottom: 15px
+
 @media screen and (min-width: $screen-sm)
-  padding-right: 80px
-  padding-left: 80px
+  .form-wrap
+    padding-right: 20px
+    padding-left: 20px
