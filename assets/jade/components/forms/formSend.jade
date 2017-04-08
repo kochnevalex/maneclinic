@@ -1,0 +1,26 @@
+#formWrap.form-wrap
+    .form-ttl Записаться на консультацию
+    form(method='POST', action='#')
+        .form-group
+            input.form-control(type='text', required='')
+            span.highlight
+            span.bar
+            label Ваше имя
+        .form-group
+            input.form-control(type='tel', required='', name='phone')
+            span.highlight
+            span.bar
+            label Ваш телефон
+        .form-group
+            input.form-control(type='email', required='')
+            span.highlight
+            span.bar
+            label E-mail
+        .form-group
+            textarea.form-control( required='' rows='1')
+            span.highlight
+            span.bar
+            label Комментарий
+        button.btn.btn--accent.btn--large.spacer--small(type='submit') Отправить
+        a.clear-form.link(href='#') Очистить форму
+

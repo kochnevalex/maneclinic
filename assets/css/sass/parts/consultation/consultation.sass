@@ -1,0 +1,67 @@
+.consultation
+  padding-bottom: 50px
+  text-align: center
+  background-color: $body-dark
+
+.consultation__item
+  margin-bottom: 40px
+
+.consultation__item-time
+  text-align: center
+
+.consultation__item-time .consultation__time-step
+  height: 60px
+  width: 60px
+  margin: 0 auto
+  line-height: 54px
+  font-size: 44px
+  font-family: $base-font-semibold
+  text-align: center
+  border: 3px solid $info-color
+  color: $info-color
+  border-radius: 50%
+
+.consultation__time-ttl
+  padding-top: 10px
+  font-size: 16px
+  line-height: 20px
+  color: $info-color
+  font-family: $base-font-semibold
+
+
+@media (min-width: $screen-sm)
+  .consultation-wrap
+    display: flex
+    flex-wrap: wrap
+
+  .consultation__item
+    display: flex
+    width: calc(50% - 10px)
+    margin-right: 20px
+
+  .consultation__item .consultation__item-text
+    flex-grow: 1
+
+  .consultation__item:nth-child(2n)
+    margin-right: 0
+
+  .consultation__item-text .sub-heading
+    margin-top: 0
+
+  .consultation__item-text
+    text-align: left
+    padding-left: 20px
+
+@media (min-width: $screen-md)
+  .consultation
+
+  .consultation__item
+    display: flex
+    width: calc(33.33% - 13.3333px)
+    margin-right: 20px
+
+  .consultation__item:nth-child(2n)
+    margin-right: 20px
+
+  .consultation__item:nth-child(3n)
+    margin-right: 0

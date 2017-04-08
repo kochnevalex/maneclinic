@@ -1,0 +1,52 @@
+body
+  font-family: $base-font
+  font-size: $base-font-size
+  background-color: $body-bg
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dt,
+dd,
+p
+  margin: 0
+  padding: 0
+
+ul,
+ol
+  list-style: none
+
+button
+  padding: 0
+  background-color: transparent
+  border: none
+  cursor: pointer
+
+  &:hover,
+  &:focus
+    outline: none
+
+a
+  color: $active-color
+
+img
+  max-width: 100%
+
+.text-center
+  text-align: center
+
+.bg-image
+  position: absolute
+  background-size: cover
+  background-position: center center
+  @include absolute-center()
+
+.wrap
+  overflow: hidden
+

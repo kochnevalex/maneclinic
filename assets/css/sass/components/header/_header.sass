@@ -1,0 +1,121 @@
+.header
+  position: relative
+
+.header__top-bar.header__top-bar
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  padding-top: 25px
+  padding-bottom: 25px
+
+/**---------------------------------------------
+  * header__top-nav
+  */
+  
+.header-logo
+  display: inline-block
+
+.header__top-btn
+  display: block
+  width: 40px
+  height: 38px
+  float: left
+  margin-top: 5px
+  margin-right: 15px
+  border: none
+  background-color: transparent
+
+.header__top-btn span
+  display: block
+  background-color: $black-color
+  height: 4px
+  margin-bottom: 6px
+  transition: all .5s ease
+
+  &:last-child
+    margin-bottom: 0
+
+.header__top-nav.active
+
+
+.header__top-ttl
+  font-size: 16px
+  line-height: 50px
+  font-family: $base-font-semibold
+
+.header__top-menu
+  display: none
+  position: absolute
+  z-index: 2
+  top: 100%
+  right: 0
+  left: 0
+  background-color: $body-bg
+
+.header__menu-inner
+  padding-bottom: 60px
+  text-align: center
+
+.header__top-nav.active .header__top-menu
+  display: block
+
+.header__top-menu-list
+  margin-bottom: 30px
+
+.header__top-menu-list li
+  font-size: 12px
+
+.header__top-menu-list li a
+  display: block
+  padding: 5px 0
+  font-size: 18px
+  line-height: 22px
+  color: $grey-color
+  text-decoration: none
+
+.header__top-info-list li
+  margin: 5px 0
+
+  &:last-child
+    margin-right: 0
+
+.header__top-info-list li a
+  font-size: 14px
+  text-decoration: none
+
+.header__top-info-list li .tel
+  font-size: 21px
+  line-height: 22px
+  color: $black-color
+  font-family: $base-font-light
+
+@media (min-width: $screen-md)
+
+  .header__top-ttl,
+  .header__top-btn
+    display: none
+
+  .header__top-menu
+    display: block
+    position: relative
+    padding: 0
+
+  .header__menu-inner
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    padding-bottom: 0
+
+  .header__top-menu-list
+    margin: 0
+    padding: 0 20px 0 0
+
+  .header__top-menu-list li
+    display: block
+    float: left
+    margin-right: 16px
+    line-height: 50px
+
+    &:last-child
+      margin-right: 0

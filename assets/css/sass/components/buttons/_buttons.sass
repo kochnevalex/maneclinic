@@ -1,0 +1,94 @@
+.btn
+  position: relative
+  display: inline-block
+  border-radius: 40px
+  cursor: pointer
+  border: none
+  vertical-align: middle
+  text-decoration: none
+  transition: all .5s ease
+  font-family: $base-font-bold
+
+.btn.btn--accent
+  background: $accent-color
+  color: $white-color
+  &:hover
+    background-color: $accent-color-hover
+
+.btn.btn--large
+  padding: 15px 25px
+  line-height: 20px
+  font-size: 15px
+  &:hover
+    transform: translateY(-5px)
+
+.btn.btn--small
+  font-size: 15px
+  line-height: 21px
+  padding: 2px 25px
+  font-family: $base-font
+
+.btn.btn--phone
+  height: 55px
+  width: 55px
+  background: $accent-color
+  &:hover
+    background-color: $accent-color-hover
+  &::before
+    display: block
+    position: absolute
+    content: ''
+    @include sprite($phone)
+    @include x-y-center()
+
+.btn.btn--transparent
+  font-size: 18px
+  line-height: 22px
+  padding: 14px 30px
+  border: 1px solid $main-color
+  color: $main-color
+  &:hover
+    background-color: $main-color
+    color: $white-color
+
+.btn--ripple
+  transition: all .5s ease
+
+.btn--ripple:hover
+  animation-name: ribble
+  animation-iteration-count: infinite
+  animation-duration: 1s
+  transition: all .5s ease
+
+// ribble button animation
+@keyframes ribble
+  20%
+    transform: rotate3d(0, 0, 1, 15deg)
+
+  40%
+    transform: rotate3d(0, 0, 1, -10deg)
+
+  60%
+    transform: rotate3d(0, 0, 1, 5deg)
+
+  80%
+    transform: rotate3d(0, 0, 1, -5deg)
+
+  100%
+    transform: rotate3d(0, 0, 1, 0deg)
+
+@media screen and (min-width: $screen-sm)
+  .btn.btn--large
+    padding: 20px 45px
+    line-height: 25px
+    font-size: 20px
+
+@media screen and (min-width: $screen-md)
+  .btn.btn--large
+    padding: 25px 80px
+    line-height: 30px
+    font-size: 25px
+
+
+
+

@@ -1,0 +1,47 @@
+.price
+  padding-bottom: 50px
+  text-align: center
+
+.price__item
+  padding: 20px
+  margin-bottom: 40px
+  border-radius: 15px
+  background-color: $white-color
+
+.price__item-cost
+  margin-top: 25px
+  font-size: 40px
+  margin-bottom: 25px
+  line-height: 44px
+  font-family: $base-font-light
+  color: $main-color
+  text-align: left
+
+.price__item .text
+  margin-bottom: 25px
+  text-align: left
+
+.price__item .sub-heading
+  margin-bottom: 10px
+  text-align: left
+
+@media (min-width: $screen-sm)
+  .price-wrap
+    display: flex
+    flex-wrap: wrap
+
+  .price__item
+    width: calc(50% - 10px)
+    margin-right: 20px
+
+  .price__item:nth-child(2n)
+    margin-right: 0
+
+@media (min-width: $screen-md)
+  .price__item
+    width: calc(33.3333% - 13.3333px)
+
+  .price__item:nth-child(3n)
+    margin-right: 0
+  .price__item:nth-child(2n)
+    margin-right: 20px
