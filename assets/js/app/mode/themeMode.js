@@ -35,12 +35,13 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
             _globals.siteObj.utils.extend(_globals.siteObj.classes.FormValidate, _globals.siteObj.base.Class);
             _globals.siteObj.utils.extend(_globals.siteObj.classes.BgImages, _globals.siteObj.base.Class);
             _globals.siteObj.utils.extend(_globals.siteObj.classes.Landing, _globals.siteObj.base.Class);
+            _globals.siteObj.utils.extend(_globals.siteObj.classes.MailSend, _globals.siteObj.base.Class);
         },
 
         _instantiateClasses = function () {
             _globals.siteObj.createClassInstance('formValidate', _globals.siteObj.classes.FormValidate, {classId: 'FormValidate'});
             _globals.siteObj.createClassInstance('bgImages', _globals.siteObj.classes.BgImages, {classId: 'BgImages'});
-            _globals.siteObj.createClassInstance('Landing', _globals.siteObj.classes.Landing, {classId: 'Landing'});
+            _globals.siteObj.createClassInstance('MailSend', _globals.siteObj.classes.MailSend, {classId: 'MailSend'});
         },
 
         _setup = function () {
@@ -59,6 +60,7 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
                         _themeMode.trigger('FormValidate_Init', data);
                         _themeMode.trigger('BgImages_Init', data);
                         _themeMode.trigger('Landing_Init', data);
+                        _themeMode.trigger('MailSend_Init', data);
                         AOS.init();
                     });
                 }
