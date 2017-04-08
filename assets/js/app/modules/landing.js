@@ -12,7 +12,8 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             licensGalleryBtn: '#licensBtn',
             certificateGalleryBtn: '#certificateBtn',
             certificateGallery: '#certificate',
-            form: '.form-wrap'
+            form: '.form-wrap',
+            menuItem: '#menu li a'
 
             // elements
             // prop
@@ -32,6 +33,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             certificateGalleryBtn: null,
             certificateGallery: null,
             form: null,
+            menuItem: null,
 
 
             // prop
@@ -61,6 +63,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             _g.certificateGallery = $(_p.certificateGallery);
             _g.certificateGalleryBtn = $(_p.certificateGalleryBtn);
             _g.form = $(_p.form);
+            _g.menuItem = $(_p.menuItem);
 
         },
 
@@ -91,13 +94,18 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                 // $('#headerTopNav').toggleClass('active');
                 _g.headerMenu.slideToggle(500);
             });
+            if ($(window).width() < 768) {
+
+                _g.menuItem.on('click', function () {
+                    _g.headerMenu.slideUp(500);
+                });
+            }
         },
 
         _openModalForm = function () {
             $('.modal').magnificPopup({
                 type: 'inline',
-                closeOnBgClick: true,
-                showCloseBtn: false
+                closeOnBgClick: true
             });
 
 
@@ -117,7 +125,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                 event.preventDefault();
                 var id = $(this).attr('href'),
                     top = $(id).offset().top;
-                top = top - 30;
+                top = top - 100;
 
 
                 $('body,html').animate({scrollTop: top}, 1200);
@@ -135,7 +143,6 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                     delegate: 'a', // the selector for gallery item
                     type: 'image',
                     overflowY: 'auto',
-                    showCloseBtn: false,
                     gallery: {
                         enabled: true
                     }
@@ -198,7 +205,6 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                     type: 'image',
                     overflowY: 'auto',
                     fixedBgPos: 'auto',
-                    showCloseBtn: false,
                     gallery: {
                         enabled: true
                     }
