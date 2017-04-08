@@ -31,12 +31,24 @@
 .mfp-close-btn-in .mfp-close
   font-size: 40px
   font-family: serif
-  top: -55px !important
-  right: -30px
+  top: -50px !important
+  right: -50%
+  transform: translateX(-50%)
   color: $white-color !important
 
 button.mfp-arrow
   position: fixed !important
+
+
+@media screen and (min-width: $screen-md)
+  .mfp-close-btn-in .mfp-close
+    font-size: 40px
+    font-family: serif
+    top: -50px !important
+    right: -30px
+    color: $white-color !important
+    transform: none
+
 
 @media screen and (min-width: $screen-md)
   .mfp-figure img.mfp-img

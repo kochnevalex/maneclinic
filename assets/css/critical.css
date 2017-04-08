@@ -1223,7 +1223,7 @@ img {
   font-size: 21px;
   line-height: 22px;
   color: #000000;
-  font-family: "ProximaNovaCond Light"; }
+  font-family: "ProximaNovaCond Regular"; }
 
 @media (min-width: 992px) {
   .header__top-info {
@@ -1812,12 +1812,28 @@ textarea.form-control {
 .mfp-close-btn-in .mfp-close {
   font-size: 40px;
   font-family: serif;
-  top: -55px !important;
-  right: -30px;
+  top: -50px !important;
+  right: -50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
   color: #fff !important; }
 
 button.mfp-arrow {
   position: fixed !important; }
+
+@media screen and (min-width: 992px) {
+  .mfp-close-btn-in .mfp-close {
+    font-size: 40px;
+    font-family: serif;
+    top: -50px !important;
+    right: -30px;
+    color: #fff !important;
+    -webkit-transform: none;
+        -ms-transform: none;
+         -o-transform: none;
+            transform: none; } }
 
 @media screen and (min-width: 992px) {
   .mfp-figure img.mfp-img {

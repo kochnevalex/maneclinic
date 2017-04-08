@@ -2612,7 +2612,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   margin-bottom: 10px; }
 
 .poster .bg-image {
-  opacity: .6; }
+  opacity: .3; }
 
 .poster__text {
   text-align: center; }
@@ -2863,12 +2863,15 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   border-radius: 25px;
   background-color: #fff; }
 
+.price__item-cost span {
+  font-size: 28px; }
+
 .price__item-cost {
   margin-top: 25px;
   font-size: 40px;
   margin-bottom: 25px;
   line-height: 44px;
-  font-family: "ProximaNovaCond Light";
+  font-family: "ProximaNovaCond Regular";
   color: #034c8c;
   text-align: left; }
 
