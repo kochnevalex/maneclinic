@@ -28,27 +28,31 @@
   max-height: none !important
   padding: 0
 
-.mfp-close-btn-in .mfp-close
+.mfp-container .mfp-figure > .mfp-close
+  top: -35px !important
+
+.mfp-container .mfp-close
   font-size: 40px
   font-family: serif
-  top: -50px !important
-  right: -50%
+  top: -55px !important
+  left: 50% !important
+  right: auto
   transform: translateX(-50%)
   color: $white-color !important
+  text-align: center !important
 
 button.mfp-arrow
   position: fixed !important
 
-
 @media screen and (min-width: $screen-md)
-  .mfp-close-btn-in .mfp-close
+  .mfp-container .mfp-close
     font-size: 40px
     font-family: serif
-    top: -50px !important
-    right: -30px
     color: $white-color !important
     transform: none
-
+    top: -80px !important
+    left: auto !important
+    right: -70px
 
 @media screen and (min-width: $screen-md)
   .mfp-figure img.mfp-img
@@ -60,6 +64,8 @@ button.mfp-arrow
   .mfp-content
     padding: 50px !important
     border-radius: 50px !important
+  .mfp-container .mfp-figure > .mfp-close
+    text-align: right !important
 
 
 

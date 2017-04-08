@@ -105,6 +105,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
         _openModalForm = function () {
             $('.modal').magnificPopup({
                 type: 'inline',
+                showCloseBtn: true,
                 closeOnBgClick: true
             });
 
@@ -143,9 +144,10 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                     delegate: 'a', // the selector for gallery item
                     type: 'image',
                     overflowY: 'auto',
-                    gallery: {
-                        enabled: true
-                    }
+                    showCloseBtn: true
+                    // gallery: {
+                    //     enabled: true
+                    // }
 
 
                 });
@@ -157,7 +159,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
         },
         _labelAnimation = function () {
 
-            $('input[type=tel]').inputmask("+7(999)-999-99-99");
+            $('input[type=tel]').inputmask({"mask": "+7(999)-999-99-99", showMaskOnHover: false});
             _g.form.each(function () {
                 var $input = $(this).find('input'),
                     $textarea = $(this).find('textarea');
@@ -207,6 +209,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                     type: 'image',
                     overflowY: 'auto',
                     fixedBgPos: 'auto',
+                    showCloseBtn: true,
                     gallery: {
                         enabled: true
                     }

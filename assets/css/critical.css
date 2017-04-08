@@ -1211,7 +1211,8 @@ img {
   text-decoration: none; }
 
 .header__top-info-list li {
-  margin: 5px 0; }
+  margin: 5px 0;
+  text-align: center; }
   .header__top-info-list li:last-child {
     margin-right: 0; }
 
@@ -1809,31 +1810,37 @@ textarea.form-control {
   max-height: none !important;
   padding: 0; }
 
-.mfp-close-btn-in .mfp-close {
+.mfp-container .mfp-figure > .mfp-close {
+  top: -35px !important; }
+
+.mfp-container .mfp-close {
   font-size: 40px;
   font-family: serif;
-  top: -50px !important;
-  right: -50%;
+  top: -55px !important;
+  left: 50% !important;
+  right: auto;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
        -o-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: #fff !important; }
+  color: #fff !important;
+  text-align: center !important; }
 
 button.mfp-arrow {
   position: fixed !important; }
 
 @media screen and (min-width: 992px) {
-  .mfp-close-btn-in .mfp-close {
+  .mfp-container .mfp-close {
     font-size: 40px;
     font-family: serif;
-    top: -50px !important;
-    right: -30px;
     color: #fff !important;
     -webkit-transform: none;
         -ms-transform: none;
          -o-transform: none;
-            transform: none; } }
+            transform: none;
+    top: -80px !important;
+    left: auto !important;
+    right: -70px; } }
 
 @media screen and (min-width: 992px) {
   .mfp-figure img.mfp-img {
@@ -1842,6 +1849,14 @@ button.mfp-arrow {
     margin: 140px auto !important; }
   .mfp-content {
     padding: 50px !important;
-    border-radius: 50px !important; } }
+    border-radius: 50px !important; }
+  .mfp-container .mfp-figure > .mfp-close {
+    text-align: right !important; } }
+
+#widget-call-from-site .widget-wrapper.radius:after, #widget-call-from-site .widget-wrapper.radius:before, .mango-callback .widget-wrapper.radius:after, .mango-callback .widget-wrapper.radius:before, .mng-wgt .widget-wrapper.radius:after, .mng-wgt .widget-wrapper.radius:before, .widget-wrapper .widget-wrapper.radius:after, .widget-wrapper .widget-wrapper.radius:before,
+.mango-callback .widget-wrapper.selected-dynamic.mng-wgt.common-window .button-widget-open::before,
+.mango-callback .widget-wrapper.selected-dynamic.mng-wgt.common-window .button-widget-open,
+.mango-callback .widget-wrapper.selected-dynamic::before, .mango-callback .widget-wrapper.selected-dynamic:after {
+  background-color: #038c09; }
 
 /*# sourceMappingURL=critical.css.map */
