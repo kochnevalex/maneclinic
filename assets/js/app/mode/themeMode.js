@@ -41,6 +41,7 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
         _instantiateClasses = function () {
             _globals.siteObj.createClassInstance('formValidate', _globals.siteObj.classes.FormValidate, {classId: 'FormValidate'});
             _globals.siteObj.createClassInstance('bgImages', _globals.siteObj.classes.BgImages, {classId: 'BgImages'});
+            _globals.siteObj.createClassInstance('Landing', _globals.siteObj.classes.Landing, {classId: 'Landing'});
             _globals.siteObj.createClassInstance('MailSend', _globals.siteObj.classes.MailSend, {classId: 'MailSend'});
         },
 

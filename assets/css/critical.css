@@ -1339,6 +1339,15 @@ img {
 .wrap {
   overflow: hidden; }
 
+.link {
+  color: #818181;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease; }
+
+.link:hover {
+  text-decoration: none; }
+
 .header {
   position: relative; }
 
@@ -1959,9 +1968,6 @@ label {
   text-align: center;
   margin-top: 30px;
   font-size: 12px; }
-
-.cpr a {
-  color: #2185D0; }
 
 .cpr__dt,
 .cpr__link {
