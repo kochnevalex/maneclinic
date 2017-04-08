@@ -156,13 +156,15 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
 
         },
         _labelAnimation = function () {
+
+            $('input[type=tel]').inputmask("+7(999)-999-99-99");
             _g.form.each(function () {
                 var $input = $(this).find('input'),
                     $textarea = $(this).find('textarea');
 
 
                 $input.each(function () {
-                    console.log($input);
+
                     $(this).on('change', function () {
                         var val = $(this).val();
                         if (val != '') {
