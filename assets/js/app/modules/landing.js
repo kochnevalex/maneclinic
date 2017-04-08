@@ -117,7 +117,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                 event.preventDefault();
                 var id = $(this).attr('href'),
                     top = $(id).offset().top;
-                top = top + 200;
+                top = top - 30;
 
 
                 $('body,html').animate({scrollTop: top}, 1200);
