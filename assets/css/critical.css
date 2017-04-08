@@ -1144,7 +1144,8 @@ img {
 /**---------------------------------------------
   * header__top-nav
   */
-.header-logo {
+.header-logo img {
+  width: 90px;
   display: inline-block; }
 
 .header__top-nav {
@@ -1221,10 +1222,21 @@ img {
   text-decoration: none; }
 
 .header__top-info-list li .tel {
-  font-size: 21px;
+  font-size: 16px;
   line-height: 22px;
   color: #000000;
   font-family: "ProximaNovaCond Regular"; }
+
+.header__top-info-list li button {
+  width: 135px !important; }
+
+@media (min-width: 768px) {
+  .header-logo img {
+    width: 100%; }
+  .header__top-info-list li .tel {
+    font-size: 21px; }
+  .header__top-info-list li button {
+    width: 175px !important; } }
 
 @media (min-width: 992px) {
   .header__top-info {
