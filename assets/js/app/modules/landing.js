@@ -155,6 +155,16 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                 $('body,html').animate({scrollTop: top}, 1200);
             });
 
+            $(".slide-down").on("click", function (event) {
+                event.preventDefault();
+                var id = $(this).attr('href'),
+                    top = $(id).offset().top;
+                top = top - 100;
+
+
+                $('body,html').animate({scrollTop: top}, 1200);
+            });
+
         },
 
         _labelAnimation = function () {

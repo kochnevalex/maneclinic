@@ -2618,6 +2618,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   text-align: center; }
 
 .poster__inner .slide-down {
+  z-index: 3;
   position: absolute;
   bottom: 20px;
   left: 50%;
