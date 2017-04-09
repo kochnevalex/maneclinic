@@ -7,9 +7,9 @@
 
 .poster__inner .btn--phone
   z-index: 2
-  position: absolute
+  position: fixed
   bottom: 25px
-  right: 10px
+  right: 30px
 
 .poster__text .text,
 .poster__text .heading,
@@ -21,9 +21,19 @@
 
 .poster .bg-image
   opacity: .3
-  
+
 .poster__text
   text-align: center
+
+.poster__inner .slide-down
+  position: absolute
+  bottom: 20px
+  left: 50%
+  transform: translateX(-50%)
+
+@media screen and (min-width: $screen-sm)
+  .poster__inner .btn--phone
+    display: none
 
 @media screen and (min-width: $screen-md)
   .poster__text

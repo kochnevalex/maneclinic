@@ -9,9 +9,43 @@
   transition: all .5s ease
   font-family: $base-font
 
-
 .slide-down
-  
+  position: relative
+  padding-bottom: 25px
+  font-size: 18px
+  line-height: 22px
+  color: $white-color
+  text-decoration: none
+
+.slide-down::after,
+.slide-down::before
+  position: absolute
+  display: block
+  margin: 0 auto
+  height: 10px
+  content: ''
+  width: 10px
+  left: 50%
+  transform: rotate(45deg) translateX(-50%)
+  border: 2px solid $white-color
+  border-left-color: transparent
+  border-top-color: transparent
+
+.slide-down::after
+  bottom: 0
+  opacity: .3
+  animation-name: slideup
+  animation-iteration-count: infinite
+  animation-duration: 1.5s
+  transition: all 1.5s ease
+//animation-duration: infinite
+
+.slide-down::before
+  bottom: 10px
+  animation-name: slidedown
+  animation-iteration-count: infinite
+  animation-duration: 1.5s
+  transition: all 1.5s ease
 
 .btn.btn--accent
   background: $accent-color
@@ -67,7 +101,22 @@
   animation-duration: 1s
   transition: all .5s ease
 
-// ribble button animation
+@keyframes slideup
+  0%
+    opacity: .2
+  50%
+    opacity: 1
+  100%
+    opacity: .2
+
+@keyframes slidedown
+  0%
+    opacity: 1
+  50%
+    opacity: .2
+  100%
+    opacity: 1
+
 @keyframes ribble
   20%
     transform: rotate3d(0, 0, 1, 15deg)
