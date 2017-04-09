@@ -98,13 +98,30 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             $('.modal').magnificPopup({
                 type: 'inline',
                 showCloseBtn: true,
+                closeOnBgClick: true
+
+            });
+
+            $('.modal.slider-init').magnificPopup({
+                type: 'inline',
+                showCloseBtn: true,
                 closeOnBgClick: true,
                 callbacks: {
                     open: function () {
                         _slider();
+                    },
+                    close: function () {
+                        _sliderDestroy();
                     }
                 }
+
+
             });
+        },
+
+        _sliderDestroy = function () {
+            _g.sliderFor.slick('destroy');
+            _g.sliderNav.slick('destroy');
         },
 
         _slider = function () {
