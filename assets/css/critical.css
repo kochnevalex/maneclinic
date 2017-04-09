@@ -1540,7 +1540,9 @@ img {
   display: block;
   border: none;
   border-bottom: 1px solid #818181;
-  text-align: center; }
+  text-align: center;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
   .form-control::-webkit-input-placeholder {
     opacity: 1;
     color: #9f9f9f; }
@@ -1727,6 +1729,7 @@ textarea.form-control {
     display: block;
     width: calc(100% - 165px); }
   .slider-wrap .slider-nav {
+    height: 100%;
     width: 165px;
     padding-right: 60px; } }
 
@@ -1858,7 +1861,7 @@ textarea.form-control {
   padding: 60px 20px !important; }
 
 .mfp-content {
-  width: 100% !important;
+  width: auto !important;
   padding: 20px !important;
   background-color: #fff;
   border-radius: 40px; }

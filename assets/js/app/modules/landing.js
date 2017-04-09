@@ -116,22 +116,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                 fade: true,
                 dots: false,
                 asNavFor: '.slider-nav',
-                infinite: false,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                            infinite: false,
-                            arrows: false,
-                            dots: false,
-                            centerMode: false,
-                            focusOnSelect: false,
-                            vertical: true
-                        }
-                    }
-                ]
+                infinite: false
             });
             _g.sliderNav.slick({
                 slidesToShow: 3,
@@ -142,6 +127,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
                 dots: false,
                 centerMode: true,
                 focusOnSelect: true,
+                centerPadding: '0',
                 vertical: true
             });
 
