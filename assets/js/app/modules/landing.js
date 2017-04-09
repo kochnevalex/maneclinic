@@ -8,12 +8,10 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             headerBtn: '#headerTopBtn',
             headerMenu: '#headerTopMenu',
             inputPhone: 'input[name=phone]',
-            licensGallery: '#licens',
-            licensGalleryBtn: '#licensBtn',
-            certificateGalleryBtn: '#certificateBtn',
-            certificateGallery: '#certificate',
             form: '.form-wrap',
-            menuItem: '#menu li a'
+            menuItem: '#menu li a',
+            sliderFor: '.slider-for',
+            sliderNav: '.slider-nav'
 
             // elements
             // prop
@@ -28,12 +26,10 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             headerBtn: null,
             headerMenu: null,
             inputPhone: null,
-            licensGallery: null,
-            licensGalleryBtn: null,
-            certificateGalleryBtn: null,
-            certificateGallery: null,
             form: null,
             menuItem: null,
+            sliderFor: null,
+            sliderNav: null,
 
 
             // prop
@@ -58,12 +54,10 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             _g.headerBtn = $(_p.headerBtn);
             _g.headerMenu = $(_p.headerMenu);
             _g.inputPhone = $(_p.inputPhone);
-            _g.licensGallery = $(_p.licensGallery);
-            _g.licensGalleryBtn = $(_p.licensGalleryBtn);
-            _g.certificateGallery = $(_p.certificateGallery);
-            _g.certificateGalleryBtn = $(_p.certificateGalleryBtn);
             _g.form = $(_p.form);
             _g.menuItem = $(_p.menuItem);
+            _g.sliderFor = $(_p.sliderFor);
+            _g.sliderNav = $(_p.sliderNav);
 
         },
 
@@ -72,7 +66,6 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             _openModalForm();
             _clearForm();
             _scrollAnchor();
-            _licensGalleryInit();
             _labelAnimation();
         },
 
@@ -105,12 +98,55 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             $('.modal').magnificPopup({
                 type: 'inline',
                 showCloseBtn: true,
-                closeOnBgClick: true
+                closeOnBgClick: true,
+                callbacks: {
+                    open: function () {
+                        _slider();
+                    }
+                }
+            });
+        },
+
+        _slider = function () {
+
+            _g.sliderFor.slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                dots: false,
+                asNavFor: '.slider-nav',
+                infinite: false,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            infinite: false,
+                            arrows: false,
+                            dots: false,
+                            centerMode: false,
+                            focusOnSelect: false,
+                            vertical: true
+                        }
+                    }
+                ]
+            });
+            _g.sliderNav.slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: false,
+                arrows: false,
+                asNavFor: '.slider-for',
+                dots: false,
+                centerMode: true,
+                focusOnSelect: true,
+                vertical: true
             });
 
 
         },
-
 
 
         _clearForm = function () {
@@ -134,30 +170,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             });
 
         },
-        _licensGalleryInit = function () {
 
-
-            _g.licensGalleryBtn.on('click', function (e) {
-                e.preventDefault();
-                _g.licensGallery.magnificPopup({
-
-                    closeOnBgClick: true,
-                    delegate: 'a', // the selector for gallery item
-                    type: 'image',
-                    overflowY: 'auto',
-                    showCloseBtn: true
-                    // gallery: {
-                    //     enabled: true
-                    // }
-
-
-                });
-                _g.licensGallery.magnificPopup('open');
-
-            });
-
-
-        },
         _labelAnimation = function () {
 
             $('input[type=tel]').inputmask({"mask": "+7(999)-999-99-99", showMaskOnHover: false});
@@ -197,8 +210,6 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
 
             });
         },
-
-
 
 
         _setCustomMethods = function () {

@@ -45,6 +45,7 @@
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src="./js/jquery/plugins/slick/slick.min.js"></script>
     <script src="./js/jquery/plugins/aos/aos.js"></script>
+    <script src="./js/jquery/plugins/slick/slick.min.js"></script>
     <script src="./js/jquery/plugins/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script><!-- Google Tag Manager (noscript) -->
     <noscript>
@@ -69,6 +70,7 @@
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src="./js/jquery/plugins/slick/slick.min.js"></script>
     <script src="./js/jquery/plugins/aos/aos.js"></script>
+    <script src="./js/jquery/plugins/slick/slick.min.js"></script>
     <script src="./js/jquery/plugins/magnific-popup/jquery.magnific-popup.js"></script>
     <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script><!-- Google Tag Manager (noscript) -->
     <noscript>
@@ -162,7 +164,7 @@
         <div class="container">
           <div class="poster__inner">
             <div class="poster__text">
-              <div class="heading">Уже через 2 часа вы проснетесь с новыми шведскими имплантами Nobel Biocare</div>
+              <div data-aos="fade-down" data-aos-duration="2000" data-aos-easing="ease-out-cubic" class="heading">Уже через 2 часа вы проснетесь с новыми шведскими имплантами Nobel Biocare</div>
               <div class="sub-heading">Европейская методика имплантации во сне: без боли, <br> дискомфорта и с пожизненной гарантией</div><a href="#formWrap" class="modal btn btn--large spacer--small btn--accent">Записаться на консультацию</a>
             </div>
             <div data-settings="{&quot;type&quot;:&quot;&quot;, &quot;id&quot;: &quot;MTAwMDUxOTA=&quot;,&quot;autoDial&quot; : &quot;0&quot;, &quot;lang&quot; : &quot;ru-ru&quot;, &quot;host&quot;:&quot;widgets.mango-office.ru/&quot;, &quot;errorMessage&quot;: &quot;В данный момент наблюдаются технические проблемы и совершение звонка невозможно&quot;}" style="background-color: #038c09;" class="mango-callback"></div><a href="#" class="btn btn--phone btn--accent btn--ripple"></a><a href="#" class="slide-down">Крутите вниз</a>
@@ -472,7 +474,20 @@
             <button type="submit" class="btn btn--accent btn--large spacer--small btn--full">Отправить</button><a href="#" class="clear-form link">Очистить форму</a>
           </form>
         </div>
-        <div id="licens" class="licens"><a href="images/licens/licens1.jpg"></a><a href="images/licens/licens2.jpg"></a><a href="images/licens/licens3.jpg"></a></div>
+        <div id="licens" class="licens">
+          <div class="slider-wrap">
+            <div class="slider-nav">
+              <div><img src="images/licens/licens1.jpg" alt=""></div>
+              <div><img src="images/licens/licens2.jpg" alt=""></div>
+              <div><img src="images/licens/licens3.jpg" alt=""></div>
+            </div>
+            <div class="slider-for">
+              <div><img src="images/licens/licens1.jpg" alt=""></div>
+              <div><img src="images/licens/licens2.jpg" alt=""></div>
+              <div><img src="images/licens/licens3.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
         <div id="conf" class="conf">
           <h4>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h4>
           <p>Настоящая Политика конфиденциальности персональных данных (далее – Политика конфиденциальности) действует в отношении всей информации, которую Стоматологическая Клиника «МАНЭ»,  расположенная на доменном имени http://maneclinic.ru, может получить о Пользователе во время использования сайта, программ и продуктов клиники.</p>
@@ -581,7 +596,7 @@
       <div class="cpr">
         <div class="container">
           <div class="cpr__dt">© 2017 MANECLINIC</div>
-          <div class="cpr__link"><a id="licensBtn" href="" class="link">Лицензия</a>   <a href="#conf" class="modal link"> Политика конфидециальности</a></div>
+          <div class="cpr__link"><a href="#licens" class="modal link">Лицензия</a>   <a href="#conf" class="modal link"> Политика конфидециальности</a></div>
         </div>
       </div>
     </footer>
