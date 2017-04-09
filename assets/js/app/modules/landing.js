@@ -73,7 +73,6 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             _clearForm();
             _scrollAnchor();
             _licensGalleryInit();
-            _certificateGalleryInit();
             _labelAnimation();
         },
 
@@ -111,6 +110,8 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
 
 
         },
+
+
 
         _clearForm = function () {
             $('.clear-form').on('click', function (e) {
@@ -197,31 +198,7 @@ appMakeBeCool.gateway.addClass('Landing', function (properties, $, $window, $doc
             });
         },
 
-        _certificateGalleryInit = function () {
 
-
-            _g.certificateGalleryBtn.on('click', function (e) {
-                e.preventDefault();
-                _g.certificateGallery.magnificPopup({
-
-                    closeOnBgClick: true,
-                    delegate: 'a', // the selector for gallery item
-                    type: 'image',
-                    overflowY: 'auto',
-                    fixedBgPos: 'auto',
-                    showCloseBtn: true,
-                    gallery: {
-                        enabled: true
-                    }
-
-
-                });
-                _g.certificateGallery.magnificPopup('open');
-
-            });
-
-
-        },
 
 
         _setCustomMethods = function () {

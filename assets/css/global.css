@@ -2937,4 +2937,26 @@ p.sub-heading {
   .price__item:nth-child(2n) {
     margin-right: 20px; } }
 
+.conf {
+  position: relative;
+  display: none;
+  max-width: 850px;
+  margin: 0 auto; }
+
+.conf p,
+.conf h4 {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: justify; }
+
+.conf p + h4 {
+  padding-bottom: 0; }
+
+.conf h4 {
+  padding: 23px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: "ProximaNovaCond Bold"; }
+
 /*# sourceMappingURL=global.css.map */
