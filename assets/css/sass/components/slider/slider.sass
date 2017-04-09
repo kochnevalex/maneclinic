@@ -1,0 +1,33 @@
+.licens
+  display: none
+  position: relative
+  max-width: 850px
+
+.slider-wrap
+  max-width: 100%
+  width: 100%
+  display: flex
+  overflow: hidden
+
+.licens .slider-for
+  display: none
+
+.licens .slider-nav
+  width: 100%
+
+.licens .slider-for,
+.licens .slider-nav,
+.licens .slider-for img,
+.licens .slider-nav img
+  //width: 100%
+
+@media screen and (min-width: $screen-sm)
+  .slider-wrap .slider-for
+    display: block
+    width: calc(100% - 165px)
+
+  .slider-wrap .slider-nav
+
+    width: 165px
+    padding-right: 60px
+
