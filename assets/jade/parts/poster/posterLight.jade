@@ -1,0 +1,74 @@
+section#poster.poster
+
+    video( loop muted autoplay poster="images/slideImage/slide.jpg")
+        source( src="uploads-demo/ManeClinic.mp4" type="video/mp4")
+    //.bg-image(data-bgimage='images/slideImage/slide.jpg')
+
+
+
+    .container
+        .poster__inner
+            .poster__text
+                .heading(data-aos="fade-up"  data-aos-duration="1500"  ) Уже через 2 часа вы проснетесь с новыми шведскими имплантами Nobel Biocare
+                .sub-heading(data-aos="fade-up"  data-aos-duration="1500" data-aos-delay="300"  ) Европейская методика имплантации во сне: без боли, #[br] дискомфорта и с пожизненной гарантией
+                a.modal.btn.btn--large.spacer--small.btn--accent(href='#formWrap' data-aos="fade-up"  data-aos-duration="1500"  data-aos-delay="600" ) Записаться на консультацию
+            .mango-callback(data-settings='{"type":"", "id": "MTAwMDUxOTA=","autoDial" : "0", "lang" : "ru-ru", "host":"widgets.mango-office.ru/", "errorMessage": "В данный момент наблюдаются технические проблемы и совершение звонка невозможно"}' style='background-color: #038c09;')
+            a.btn.btn--phone.btn--accent.btn--ripple(href='tel:74951202700')
+            a.slide-down(href='#clients') Крутите вниз
+
+
+
+
+            .mango-callback( data-settings='{"type":"", "id": "MTAwMDUxOTA=","autoDial" : "0", "lang" : "ru-ru", "host":"widgets.mango-office.ru/", "errorMessage": "В данный момент наблюдаются технические проблемы и совершение звонка невозможно"}')
+            script.
+                !function (t) {
+                    function e() {
+                        i = document.querySelectorAll(".button-widget-open");
+                        for (var e = 0; e < i.length; e++)"true" != i[e].getAttribute("init") && (options = JSON.parse(i[e].closest('.' + t).getAttribute("data-settings")), i[e].setAttribute("onclick", "alert('" + options.errorMessage + "(0000)'); return false;"))
+                    }
+
+                    function o(t, e, o, n, i, r) {
+                        var s = document.createElement(t);
+                        for (var a in e)s.setAttribute(a, e[a]);
+                        s.readyState ? s.onreadystatechange = o : (s.onload = n, s.onerror = i), r(s)
+                    }
+
+                    function n() {
+                        for (var t = 0; t < i.length; t++) {
+                            var e = i[t];
+                            if ("true" != e.getAttribute("init")) {
+                                options = JSON.parse(e.getAttribute("data-settings"));
+                                var o = new MangoWidget({
+                                    host: window.location.protocol + '//' + options.host,
+                                    id: options.id,
+                                    elem: e,
+                                    message: options.errorMessage
+                                });
+                                o.initWidget(), e.setAttribute("init", "true"), i[t].setAttribute("onclick", "")
+                            }
+                        }
+                    }
+
+                    host = window.location.protocol + "//widgets.mango-office.ru/";
+                    var i = document.getElementsByClassName(t);
+                    o("link", {rel: "stylesheet", type: "text/css", href: host + "css/widget-button.css"}, function () {
+                    }, function () {
+                    }, e, function (t) {
+                        document.documentElement.insertBefore(t, document.documentElement.firstChild)
+                    }), o("script", {type: "text/javascript", src: host + "widgets/mango-callback.js"}, function () {
+                        ("complete" == this.readyState || "loaded" == this.readyState) && n()
+                    }, n, e, function (t) {
+                        document.documentElement.appendChild(t)
+                    })
+                }("mango-callback");
+
+
+
+
+
+
+
+
+
+
+

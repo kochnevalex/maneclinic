@@ -1,0 +1,23 @@
+- var pageTitle = "Index";
+
+doctype html
+html(lang='ru')
+    include components/head/head
+
+    body
+        include components/scripts/scripts
+        .wrap
+            include components/header/headerLight
+            include parts/poster/posterLight
+            include parts/price/price
+            .container
+                include components/forms/formSend
+                include parts/licens/licens
+                include components/conf/conf
+
+
+
+        include components/footer/footerLight
+        include components/scripts/bottomScripts
+
+

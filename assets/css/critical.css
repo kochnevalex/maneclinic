@@ -1765,6 +1765,9 @@ textarea.form-control {
   margin-left: auto;
   margin-right: auto; }
 
+.center-container {
+  text-align: center; }
+
 @media screen and (min-width: 992px) {
   .text {
     font-size: 18px;
@@ -1784,6 +1787,9 @@ textarea.form-control {
 
 .footer-main .bg-image {
   opacity: .15; }
+
+.footer-main__inner .heading {
+  text-align: center; }
 
 .footer-main__inner {
   position: relative;
@@ -1922,7 +1928,7 @@ button.mfp-arrow {
   .mfp-content {
     margin: 140px auto !important; } }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .mango-callback .widget-wrapper.common-window.mng-wgt .widget-wrapper__center, .widget-wrapper.common-window.mng-wgt .widget-wrapper__center {
     background-color: #038c09;
     font-family: "ProximaNovaCond Regular"; }

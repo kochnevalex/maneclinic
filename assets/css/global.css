@@ -2591,7 +2591,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
   margin-top: 15px; }
 
 .poster {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .poster__inner {
   position: relative;
@@ -2626,6 +2627,15 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
       -ms-transform: translateX(-50%);
        -o-transform: translateX(-50%);
           transform: translateX(-50%); }
+
+.poster video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+       -o-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%); }
 
 @media screen and (min-width: 768px) {
   .poster__inner .btn--phone {
