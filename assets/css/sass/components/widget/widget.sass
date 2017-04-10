@@ -1,12 +1,22 @@
-@media screen and  (max-width: $screen-md)
+@media screen and (max-width: $screen-md)
   .mango-callback .widget-wrapper.common-window.mng-wgt .widget-wrapper__center, .widget-wrapper.common-window.mng-wgt .widget-wrapper__center
     background-color: $accent-color
     font-family: $base-font
 
+  .close-popup
+    position: relative
+    &::before
+      position: absolute
+      display: block
+      height: 50px
+      width: 50px
+      content: ''
+      top: -17px
+      left: -17px
+
 .mango-callback .widget-wrapper.selected-dynamic::before, .mango-callback .widget-wrapper.selected-dynamic:after,
 .mango-callback .widget-wrapper.selected-dynamic.mng-wgt.common-window .button-widget-open,
-#widget-call-from-site .widget-wrapper.radius:after, #widget-call-from-site .widget-wrapper.radius:before, .mango-callback .widget-wrapper.radius:after, .mango-callback .widget-wrapper.radius:before, .mng-wgt .widget-wrapper.radius:after, .mng-wgt .widget-wrapper.radius:before, .widget-wrapper .widget-wrapper.radius:after, .widget-wrapper .widget-wrapper.radius:before,
-
+#widget-call-from-site .widget-wrapper.radius:after, #widget-call-from-site .widget-wrapper.radius:before, .mango-callback .widget-wrapper.radius:after, .mango-callback .widget-wrapper.radius:before, .mng-wgt .widget-wrapper.radius:after, .mng-wgt .widget-wrapper.radius:before, .widget-wrapper .widget-wrapper.radius:after, .widget-wrapper .widget-wrapper.radius:before
   background-color: $accent-color
   font-family: $base-font
 
