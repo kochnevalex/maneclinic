@@ -2629,6 +2629,7 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
           transform: translateX(-50%); }
 
 .poster video {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2638,6 +2639,8 @@ body[data-aos-easing="ease-in-out-quart"] [data-aos], [data-aos][data-aos][data-
           transform: translateX(-50%) translateY(-50%); }
 
 @media screen and (min-width: 768px) {
+  .poster video {
+    display: block; }
   .poster__inner .btn--phone {
     display: none; } }
 

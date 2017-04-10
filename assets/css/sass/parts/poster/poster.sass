@@ -34,12 +34,18 @@
   transform: translateX(-50%)
 
 .poster video
+  display: none
   position: absolute
   top: 50%
   left: 50%
   transform: translateX(-50%) translateY(-50%)
 
+.poster--light
+
 @media screen and (min-width: $screen-sm)
+  .poster video
+    display: block
+
   .poster__inner .btn--phone
     display: none
 
