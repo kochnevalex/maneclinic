@@ -1745,7 +1745,7 @@ textarea.form-control {
   line-height: 36px;
   font-family: "ProximaNovaCond Bold";
   color: #034c8c;
-  text-align: center; }
+  text-align: left; }
 
 .sub-heading {
   margin: 5px 0;
@@ -1773,7 +1773,8 @@ textarea.form-control {
     padding-top: 80px;
     font-size: 40px;
     line-height: 44px;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    text-align: center; }
   .sub-heading {
     font-size: 20px;
     line-height: 24px; } }
@@ -1921,10 +1922,14 @@ button.mfp-arrow {
   .mfp-content {
     margin: 140px auto !important; } }
 
-#widget-call-from-site .widget-wrapper.radius:after, #widget-call-from-site .widget-wrapper.radius:before, .mango-callback .widget-wrapper.radius:after, .mango-callback .widget-wrapper.radius:before, .mng-wgt .widget-wrapper.radius:after, .mng-wgt .widget-wrapper.radius:before, .widget-wrapper .widget-wrapper.radius:after, .widget-wrapper .widget-wrapper.radius:before,
-.mango-callback .widget-wrapper.selected-dynamic.mng-wgt.common-window .button-widget-open::before,
+@media screen and (max-width: 992px) {
+  .mango-callback .widget-wrapper.common-window.mng-wgt .widget-wrapper__center, .widget-wrapper.common-window.mng-wgt .widget-wrapper__center {
+    background-color: #038c09;
+    font-family: "ProximaNovaCond Regular"; } }
+
+.mango-callback .widget-wrapper.selected-dynamic::before, .mango-callback .widget-wrapper.selected-dynamic:after,
 .mango-callback .widget-wrapper.selected-dynamic.mng-wgt.common-window .button-widget-open,
-.mango-callback .widget-wrapper.selected-dynamic::before, .mango-callback .widget-wrapper.selected-dynamic:after {
+#widget-call-from-site .widget-wrapper.radius:after, #widget-call-from-site .widget-wrapper.radius:before, .mango-callback .widget-wrapper.radius:after, .mango-callback .widget-wrapper.radius:before, .mng-wgt .widget-wrapper.radius:after, .mng-wgt .widget-wrapper.radius:before, .widget-wrapper .widget-wrapper.radius:after, .widget-wrapper .widget-wrapper.radius:before {
   background-color: #038c09;
   font-family: "ProximaNovaCond Regular"; }
 
